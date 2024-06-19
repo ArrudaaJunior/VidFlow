@@ -1,5 +1,6 @@
 const containerVideos = document.querySelector(".videos__container");
 const barraDePesquisa = document.querySelector(".pesquisar__input");
+const botaoCategoria = document.querySelectorAll(".supeiror__item");
 
 barraDePesquisa.addEventListener("input", filtrarPesquisa);
 
@@ -46,3 +47,14 @@ function filtrarPesquisa() {
     })
 }
 
+botaoCategoria.forEach((botao) => {
+    let nomeCategoria = botao.getAttribute("name");
+    botao.addEventListener("click", () => filtrarPorCategoria(nomeCategoria));
+})
+
+function filtrarPorCategoria(filtro){
+    const videos = document.querySelectorAll(".videos__item");
+    for(let video of video) {
+        
+    }
+}
